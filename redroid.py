@@ -27,7 +27,7 @@ def main():
                         dest='gapps',
                         help='Install OpenGapps to ReDroid',
                         action='store_true')
-    parser.add_argument('-lg', '--install-litegapps',
+    parser.add_argument('-l', '--install-litegapps',
                         dest='litegapps',
                         help='Install LiteGapps to ReDroid',
                         action='store_true')
@@ -39,7 +39,7 @@ def main():
                         dest='houdini',
                         help='Install houdini files',
                         action='store_true')
-    parser.add_argument('-mtg', '--install-mindthegapps',
+    parser.add_argument('-d', '--install-mindthegapps',
                         dest='mindthegapps',
                         help='Install MindTheGapps to ReDroid',
                         action='store_true')
