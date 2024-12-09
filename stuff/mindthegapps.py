@@ -8,58 +8,38 @@ class MindTheGapps(General):
     dl_links = {
         "14.0.0": {
             "x86_64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-14.0.0-x86_64-20240226.zip",
-                "a827a84ccb0cf5914756e8561257ed13",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-14.0.0-x86_64-20240619.zip",
+                "9fd3e7fe2370183a9cdcff8f26837516",
             ],
             "x86": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-14.0.0-x86-20240226.zip",
-                "45736b21475464e4a45196b9aa9d3b7f",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-14.0.0-x86-220240619.zip",
+                "eeeaec8e7225a7f7c8cfc31538e9f804",
             ],
             "arm64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-14.0.0-arm64-20240226.zip",
-                "a0905cc7bf3f4f4f2e3f59a4e1fc789b",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-14.0.0-arm64-20240619.zip",
+                "be537e97339ae822b791c8e8a1173f7e",
             ],
             "arm": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-14.0.0-arm-20240226.zip",
-                "fa167a3b7a10c4d3e688a59cd794f75b",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-14.0.0-arm-20240619.zip",
+                "5309a641271151fc1dea878f61bd16bd",
             ],
         },
         "13.0.0": {
             "x86_64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-13.0.0-x86_64-20240226.zip",
-                "eee87a540b6e778f3a114fff29e133aa",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-13.0.0-x86_64-20240619.zip",
+                "25927de9f175e1db6647ccb62c5503ce",
             ],
             "x86": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-13.0.0-x86-20240226.zip",
-                "d928c5eabb4394a97f2d7a5c663e7c2e",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-13.0.0-x86-20240619.zip",
+                "821ae859631f3d22190831e28ffcc71d",
             ],
             "arm64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-13.0.0-arm64-20240226.zip",
-                "ebdf35e17bc1c22337762fcf15cd6e97",
+                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-13.0.0-arm64-20240619.zip",
+                "4205fb7a6313ddc595cb41ad7d850474",
             ],
             "arm": [
                 "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-13.0.0-arm-20240619.zip",
                 "ec7aa5efc9e449b101bc2ee7448a49bf",
-            ],
-        },
-        "13.0.0_64only": {
-            "x86_64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-13.0.0-x86_64-20240226.zip",
-                "eee87a540b6e778f3a114fff29e133aa",
-            ],
-            "arm64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240226/MindTheGapps-13.0.0-arm64-20240226.zip",
-                "ebdf35e17bc1c22337762fcf15cd6e97",
-            ],
-        },
-        "12.0.0_64only": {
-            "x86_64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-12.1.0-x86_64-20240619.zip",
-                "05d6e99b6e6567e66d43774559b15fbd"
-            ],
-            "arm64": [
-                "https://github.com/s1204IT/MindTheGappsBuilder/releases/download/20240619/MindTheGapps-12.1.0-arm64-20240619.zip",
-                "94dd174ff16c2f0006b66b25025efd04",
             ],
         },
         "12.0.0": {
