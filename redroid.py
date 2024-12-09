@@ -49,6 +49,9 @@ def main():
     parser.add_argument('-w', '--install-widevine', dest='widevine',
                         help='Integrate Widevine DRM (L3)',
                         action='store_true')
+    parser.add_argument('-u', '--fix-systemui', dest='systemui',
+                        help='remove ui odex to fix crash (android12)',
+                        action='store_true')
     parser.add_argument('-c', '--container', 
                         dest='container',
                         default='docker',
@@ -104,6 +107,9 @@ def main():
         Widevine(args.android).install()
         dockerfile = dockerfile+"COPY widevine /\n"
         tags.append("widevine")
+    if args.systemui:
+        dockerfile = dockerfile+"COPY dirty_fix/ui /\n"
+        tags.append("systemui")
     print("\nDockerfile\n"+dockerfile)
     with open("./Dockerfile", "w") as f:
         f.write(dockerfile)
