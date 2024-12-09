@@ -75,9 +75,13 @@ def main():
         dockerfile = dockerfile + "COPY litegapps /\n"
         tags.append("litegapps")
     if args.mindthegapps:
-        MindTheGapps(args.android).install()
-        dockerfile = dockerfile + "COPY mindthegapps /\n"
-        tags.append("mindthegapps")
+        if args.android in ["12.0.0", "13.0.0", "14.0.0"]:
+            MindTheGapps(args.android).install()
+            dockerfile = dockerfile + "COPY mindthegapps /\n"
+            tags.append("mindthegapps")
+        else:
+            helper.print_color(
+                "WARNING: MindTheGapps seems to work only 12 - 14", helper.bcolors.YELLOW)
     if args.ndk:
         if args.android in ["11.0.0", "12.0.0", "13.0.0", "14.0.0"]:
             arch = helper.host()[0]
@@ -104,9 +108,13 @@ def main():
         dockerfile = dockerfile+"COPY magisk /\n"
         tags.append("magisk")
     if args.widevine:
-        Widevine(args.android).install()
-        dockerfile = dockerfile+"COPY widevine /\n"
-        tags.append("widevine")
+        if args.android in ["11.0.0", "12.0.0", "13.0.0"]:
+            Widevine(args.android).install()
+            dockerfile = dockerfile+"COPY widevine /\n"
+            tags.append("widevine")
+        else:
+            helper.print_color(
+                "WARNING: widevine seems to work only 11 - 13", helper.bcolors.YELLOW)
     if args.systemui:
         dockerfile = dockerfile+"COPY dirty_fix/ui /\n"
         tags.append("systemui")
