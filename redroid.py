@@ -11,6 +11,7 @@ from stuff.houdini_hack import Houdini_Hack
 from stuff.widevine import Widevine
 import tools.helper as helper
 import subprocess
+import os
 
 
 def main():
@@ -51,6 +52,9 @@ def main():
                         action='store_true')
     parser.add_argument('-u', '--fix-systemui', dest='systemui',
                         help='remove ui odex to fix crash (android12)',
+                        action='store_true')
+    parser.add_argument('-p', '--nodata-perm', dest='nodataperm',
+                        help='granting full permission for apps data (above android11)',
                         action='store_true')
     parser.add_argument('-c', '--container', 
                         dest='container',
@@ -118,6 +122,10 @@ def main():
     if args.systemui:
         dockerfile = dockerfile+"COPY dirty_fix/ui /\n"
         tags.append("systemui")
+    if args.nodataperm:
+        os.chmod(os.path.join(os.getcwd(), "dirty_fix", "nodataperm", "system", "etc", "no_data_perm.sh"), 0o755)
+        dockerfile = dockerfile+"COPY dirty_fix/nodataperm /\n"
+        tags.append("nodataperm")
     print("\nDockerfile\n"+dockerfile)
     with open("./Dockerfile", "w") as f:
         f.write(dockerfile)
