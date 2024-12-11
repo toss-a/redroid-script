@@ -15,14 +15,14 @@ class Ndk(General):
             "https://github.com/supremegamers/vendor_google_proprietary_ndk_translation-prebuilt/archive/181d9290a69309511185c4417ba3d890b3caaaa8.zip",
             "0beff55f312492f24d539569d84f5bfb"],
         "13.0.0": [
-            "https://github.com/supremegamers/vendor_google_proprietary_ndk_translation-prebuilt/archive/faece8cc787a520193545116501cad40534063fc.zip",
-            "f7605b31e51eaa69f13b508b20e74d10"],
+            "https://github.com/rote66/vendor_google_proprietary_ndk_translation-prebuilt/archive/fcff136caf2b78396d440198b22498095e6e0a77.zip",
+            "e8b8bbb067b39b068c46945c47177b3d"],
         "14.0.0": [
-            "https://github.com/supremegamers/vendor_google_proprietary_ndk_translation-prebuilt/archive/faece8cc787a520193545116501cad40534063fc.zip",
-            "f7605b31e51eaa69f13b508b20e74d10"]
+            "https://github.com/rote66/vendor_google_proprietary_ndk_translation-prebuilt/archive/fcff136caf2b78396d440198b22498095e6e0a77.zip",
+            "e8b8bbb067b39b068c46945c47177b3d"]
         # "15.0.0": [
-        #     "https://github.com/supremegamers/vendor_google_proprietary_ndk_translation-prebuilt/archive/faece8cc787a520193545116501cad40534063fc.zip",
-        #     "f7605b31e51eaa69f13b508b20e74d10"]
+        #     "https://github.com/rote66/vendor_google_proprietary_ndk_translation-prebuilt/archive/fcff136caf2b78396d440198b22498095e6e0a77.zip",
+        #     "e8b8bbb067b39b068c46945c47177b3d"]
         # "9.0.0":[],
         # "8.1.0":[]
     }
