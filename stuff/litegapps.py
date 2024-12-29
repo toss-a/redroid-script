@@ -175,8 +175,5 @@ class LiteGapps(General):
             os.makedirs(os.path.join(self.extract_to, "appunpack"))
 
         # extract extract_to/files/files.tar.xz file to extract_to/appunpack
-        for file in os.listdir(os.path.join(os.getcwd(), "binary")):
-            os.chmod(os.path.join(os.getcwd(), "binary", file), 0o755)
-        run( [ os.path.join(os.getcwd(), "binary", "xz"), "-d", "-f", os.path.join(self.extract_to, "files", "files.tar.xz"), ])        
-        run( [ os.path.join(os.getcwd(), "binary", "tar"), "-xf", os.path.join(self.extract_to, "files", "files.tar"), "-C", os.path.join(self.extract_to, "appunpack"), ])
+        run( [ "tar", "-xvf", os.path.join(self.extract_to, "files", "files.tar.xz"), "-C", os.path.join(self.extract_to, "appunpack"), ])
         shutil.copytree( os.path.join( self.extract_to, "appunpack", self.arch[0], self.api_level_map[self.version], "system",), os.path.join(self.copy_dir, "system"), dirs_exist_ok=True,)
