@@ -5,8 +5,6 @@ English | [简体中文](README.zh-cn.md)
 This script adds Gapps, Magisk,libhoudini and libndk to redroid **without recompiling the entire image**
 If redroid-script doesn't work, please create an issue.
 
-**Only For OpenWrt x86_64**
-
 ## Dependencies
 - python3
 
