@@ -88,10 +88,7 @@ class Gapps(General):
             if lz_file not in self.skip:
                 if lz_file not in self.non_apks:
                     print("    Processing app package : "+os.path.join(self.extract_to, "Core", lz_file))
-                    os.chmod(os.path.join(os.getcwd(), "binary", "lzip"), 0o755)
-                    run([os.path.join(os.getcwd(), "binary", "lzip"), "-kdf", os.path.join(self.extract_to, "Core", lz_file)])
-                    run(["tar", "-xf", os.path.join(self.extract_to, "Core", f"{os.path.splitext(os.path.basename(lz_file))[0]}"), "-C", os.path.join(self.extract_to, "appunpack")])
-                    os.remove(os.path.join(self.extract_to, "Core", f"{os.path.splitext(os.path.basename(lz_file))[0]}"))
+                    run(["tar", "--lzip", "-xvf", os.path.join(self.extract_to, "Core", lz_file), "-C", os.path.join(self.extract_to, "appunpack")])
                     app_name = os.listdir(os.path.join(self.extract_to, "appunpack"))[0]
                     xx_dpi = os.listdir(os.path.join(self.extract_to, "appunpack", app_name))[0]
                     app_priv = os.listdir(os.path.join(self.extract_to, "appunpack", app_name, "nodpi"))[0]
@@ -100,10 +97,7 @@ class Gapps(General):
                         shutil.copytree(os.path.join(app_src_dir, app), os.path.join(self.copy_dir, "system", "priv-app", app), dirs_exist_ok=True)
                 else:
                     print("    Processing extra package : "+os.path.join(self.extract_to, "Core", lz_file))
-                    os.chmod(os.path.join(os.getcwd(), "binary", "lzip"), 0o755)
-                    run([os.path.join(os.getcwd(), "binary", "lzip"), "-kdf", os.path.join(self.extract_to, "Core", lz_file)])
-                    run(["tar", "-xf", os.path.join(self.extract_to, "Core", f"{os.path.splitext(os.path.basename(lz_file))[0]}"), "-C", os.path.join(self.extract_to, "appunpack")])
-                    os.remove(os.path.join(self.extract_to, "Core", f"{os.path.splitext(os.path.basename(lz_file))[0]}"))
+                    run(["tar", "--lzip", "-xvf", os.path.join(self.extract_to, "Core", lz_file), "-C", os.path.join(self.extract_to, "appunpack")])
                     app_name = os.listdir(os.path.join(self.extract_to, "appunpack"))[0]
                     common_content_dirs = os.listdir(os.path.join(self.extract_to, "appunpack", app_name, "common"))
                     for ccdir in common_content_dirs:
