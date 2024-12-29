@@ -8,7 +8,7 @@ import hashlib
 def get_download_dir():
     download_loc = ""
     if os.environ.get("XDG_CACHE_HOME", None) is None:
-        download_loc = os.path.join(os.getcwd(), ".cache", "redroid", "downloads")
+        download_loc = os.path.join('/', "home", os.environ.get("SUDO_USER", os.environ["USER"]), ".cache", "redroid", "downloads")
     else:
         download_loc = os.path.join(os.environ["XDG_CACHE_HOME"], "redroid", "downloads")
     if not os.path.exists(download_loc):
