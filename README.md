@@ -107,7 +107,7 @@ docker run -itd --rm --privileged \
     ro.ndk_translation.version=0.2.2 \
 ```
 
-If you need to use libhoudini on `redroid:12.0.0` image, you should start the container with the following command
+If you need to use libhoudini on `redroid:13.0.0` image, you should start the container with the following command
 
 ```bash
 docker run -itd --rm --privileged \
@@ -122,6 +122,8 @@ docker run -itd --rm --privileged \
     ro.enable.native.bridge.exec64=1 \
     ro.dalvik.vm.native.bridge=libhoudini.so
 ```
+
+If you need to use libhoudini on redroid:11.0.0 & redroid:12.0.0 , ro.dalvik.vm.native.bridge should be libnb.so (patch only).
 
 ## Troubleshooting
 
