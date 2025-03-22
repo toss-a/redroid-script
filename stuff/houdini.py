@@ -51,8 +51,8 @@ on property:sys.boot_completed=1
             "https://github.com/rote66/vendor_intel_proprietary_houdini/archive/740353bf4391969902bc80ee2a9258db18481b45.zip",
             "d4824c0c00e8fa9611e1db5124ec61f9"],
         "14.0.0": [
-            "https://github.com/rote66/vendor_intel_proprietary_houdini/archive/740353bf4391969902bc80ee2a9258db18481b45.zip",
-            "d4824c0c00e8fa9611e1db5124ec61f9"]
+            "https://github.com/rote66/vendor_intel_proprietary_houdini/archive/476c66fa32fc9b2f622904fa1f8cf3658e85d938.zip",
+            "339a8cb7f3d8fa5959b2c79bbd858c1b"]
         # "15.0.0": [
         #     "https://github.com/rote66/vendor_intel_proprietary_houdini/archive/740353bf4391969902bc80ee2a9258db18481b45.zip",
         #     "d4824c0c00e8fa9611e1db5124ec61f9"]
@@ -82,9 +82,10 @@ on property:sys.boot_completed=1
         name = re.findall("([a-zA-Z0-9]+)\.zip", self.dl_link)[0]
         shutil.copytree(os.path.join(self.extract_to, "vendor_intel_proprietary_houdini-" + name,
                         "prebuilts"), os.path.join(self.copy_dir, "system"), dirs_exist_ok=True)
-        if self.version == "11.0.0":
+        if self.version in ["11.0.0", "12.0.0"]:
+            print_color("Copying houdini patch, ro.dalvik.vm.native.bridge should be libnb.so", bcolors.YELLOW)
             shutil.copytree(os.path.join(os.getcwd(), "dirty_fix",
-                        "houdini_fix", self.version), os.path.join(self.copy_dir, "system", "lib64"), dirs_exist_ok=True)
+                        "houdini_fix", self.version), os.path.join(self.copy_dir, "system"), dirs_exist_ok=True)
 
         init_path = os.path.join(self.copy_dir, "system", "etc", "init", "houdini.rc")
         if not os.path.isfile(init_path):
